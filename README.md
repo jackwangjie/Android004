@@ -2,40 +2,40 @@ Android004
 ==========
 
 JSON数据的读取
- import org.apache.http.Header;
- import org.apache.http.HttpEntity;
- org.apache.http.HttpResponse;
- import org.apache.http.NameValuePair;
- import org.apache.http.client.ClientProtocolException;
- import org.apache.http.client.entity.UrlEncodedFormEntity;
- import org.apache.http.client.methods.HttpPost;
- import org.apache.http.entity.StringEntity;
- import org.apache.http.impl.client.DefaultHttpClient;
- import org.apache.http.message.BasicHeader;
- import org.apache.http.message.BasicNameValuePair;
- import org.apache.http.params.BasicHttpParams;
- import org.apache.http.params.HttpConnectionParams;
- import org.apache.http.params.HttpParams;
- import org.apache.http.protocol.HTTP;
- import org.json.JSONException;
- import org.json.JSONObject;
+---------------
+   import org.apache.http.Header;
+   import org.apache.http.HttpEntity;
+   org.apache.http.HttpResponse;
+   import org.apache.http.NameValuePair;
+   import org.apache.http.client.ClientProtocolException;
+   import org.apache.http.client.entity.UrlEncodedFormEntity;
+   import org.apache.http.client.methods.HttpPost;
+   import org.apache.http.entity.StringEntity;
+   import org.apache.http.impl.client.DefaultHttpClient;
+   import org.apache.http.message.BasicHeader;
+   import org.apache.http.message.BasicNameValuePair;
+   import org.apache.http.params.BasicHttpParams;
+   import org.apache.http.params.HttpConnectionParams;
+   import org.apache.http.params.HttpParams;
+   import org.apache.http.protocol.HTTP;
+   import org.json.JSONException;
+   import org.json.JSONObject;
  
- import android.app.Activity;
- import android.content.Context;
- import android.os.Bundle;
- import android.util.Log;
- import android.widget.TextView;
+   import android.app.Activity;
+   import android.content.Context;
+   import android.os.Bundle;
+   import android.util.Log;
+   import android.widget.TextView;
+   import java.io.BufferedReader;
+   import java.io.IOException;
+   import java.io.InputStream;
+   import java.io.InputStreamReader;
+   import java.io.UnsupportedEncodingException;
+   import java.net.HttpURLConnection;
+   import java.util.ArrayList;
+   import java.util.List;
  
- import java.io.BufferedReader;
- import java.io.IOException;
- import java.io.InputStream;
- import java.io.InputStreamReader;
- import java.io.UnsupportedEncodingException;
- import java.net.HttpURLConnection;
- import java.util.ArrayList;
- import java.util.List;
- 
- public class json extends Activity {
+   public class json extends Activity {
     public Context context;
     private TextView textView1;
     public static String URL = "http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx?wsdl";
